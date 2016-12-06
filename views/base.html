@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<meta name="copyright" content="FT中文网">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="FTC Interactive Graphics"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	<meta property="og:title" content="{{ogTitle}}"/>
+	<meta property="og:type" content="{{ogType}}"/>
+	<meta property="og:image" content="{{ogImage}}"/>
+	<meta property="og:url" content="{{ogUrl}}">
+	<meta property="og:description" content="{{description}}" />
+	<meta property="og:locale" content="zh-Hans">
+	<meta property="og:site_name" content="FT中文网">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@FTChinese">
+	<meta name="twitter:title" content="{{ogTitle}}">
+	<meta name="twitter:description" content="{{description}}">
+	<meta name="twitter:image" content="{{ogImage}}">
+	{% set iconsPath = "/ftc-logos/static" %}
+	<link rel="apple-touch-icon" sizes="180x180" href="{{iconsPath}}/favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{iconsPath}}/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{iconsPath}}/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{iconsPath}}/favicons/apple-touch-icon-76x76.png">
+	<link href="{{iconsPath}}/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
+	  ga('create', 'UA-1608715-1', 'www.ftchinese.com');
+	  ga('send', 'pageview');
+	</script>
+	<script type="text/javascript">
+		window.USERIP = '133.133.133.133';
+		window.CAPTCHA = (function(){
+			const code = [];
+			const timeString = new Date().getTime().toString();
+			code[3] = timeString.slice(0,5);
+			code[1] = timeString.slice(5,10);
+
+			const userIp = window.USERIP.split('.');
+			code[0] = userIp[userIp.length - 1];
+			code[2] = userIp[0];
+
+			return code.join('');
+		})();
+	</script>
+
+	{% block css %}
+	<style type="text/css">
+		.o-header {
+			height: 44px;
+			text-align:center;
+			background-color: #fff1e0;
+			color: #505050;
+			box-shadow: 0 1px 3px rgba(80, 80, 80, 0.2), 0 6px 10px rgba(80, 80, 80, 0.15);
+		}
+		.o-header__logo {
+			padding:11.5px 0;
+		}
+		.o-header span {
+			display: none;
+		}
+		.o-header img {
+			height: 21px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	{% endblock %}
+
+	<title>Next Signup - FT中文网</title>
+</head>
+
+<body>
+	<div class="o-header">
+		<div class="o-header__logo">
+			<a class="o-header__logo-link" href="http://www.ftchinese.com" target="_blank" title="前往FT中文网首页">
+				<span>FT中文网</span>
+				<img src="http://static.ftchinese.com/ftc-icons/png/brand-ftc-masthead.png" target="_blank">
+			</a>
+		</div>
+	</div>
+
+	{% block body %}
+	{% endblock %}
+
+
+
+</body>
+</html>

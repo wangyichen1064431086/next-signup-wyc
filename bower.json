@@ -1,0 +1,24 @@
+{
+  "name": "koa-demo",
+  "description": "A Koa.js demo",
+  "main": "index.js",
+  "authors": [
+    "weiguo.ni <neefrankie@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/neefrankie/koa-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ajax": "^2.1.2",
+    "ftc-icons": "^3.3.0",
+    "o-grid": "^4.3.0",
+    "fetch": "^2.0.1",
+    "promise-polyfill": "^6.0.2"
+  }
+}

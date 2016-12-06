@@ -1,0 +1,74 @@
+<article id="generalStatusBox" class="su-status-box is-hidden">
+	<span class="js-item__label"></span>
+</article>
+
+<form id="signupForm" class="su-form" action="/index.php/users/registeruser/ajax" method="post" enctype="application/x-www-form-urlencoded">
+	<h2>创建账户</h2>
+	<fieldset class="su-form__fieldset">
+
+		<div id="emailField" class="su-field" data-validate="required,email" data-remote-validate="/index.php/users//checkemailexists">
+			<div class="label-wrapper">
+			<label class="su-field__label" for="email">
+				电子邮箱
+			</label>
+			<div class="su-field__instructions su-text">
+				用于登陆FT中文网、找回遗忘的密码，40字符以内
+			</div>
+
+			<div class="input-wrapper">
+				<input id="email" type="email" name="email" class="su-field__input" placeholder="请输入电子邮件地址">
+				<span class="su-field__error">
+				请输入有效的邮箱
+				</span>
+			</div>
+
+			<div id="emailExistsStatusBox" class="su-status-box is-invisible">
+				<span class="js-item__label">
+					该邮箱已注册，点击右下角“设置”直接登录
+				</span>
+			</div>
+		</div>
+
+		<div id="passwordField" class="su-field" data-validate="required,password">
+			<div class="label-wrapper">
+				<label for="password" class="su-field__label">
+					登录密码
+				</label>
+				<div class="su-field__instructions su-text">
+					6-20位英文字母和数字组合
+				</div>
+			</div>
+
+			<div class="show-password">
+				<div class="input-wrapper">
+					<input type="password" id="password" name="password" class="su-field__input" placeholder="请输入密码">
+					<span class="su-field__error">
+						请输入有效的密码
+					</span>
+				</div>
+
+				<span class="show-password__suffix">
+					<input type="checkbox" id="showPassword" class="show-password__checkbox">
+					<label for="showPassword" class="show-password__label"></label>
+				</span>
+			</div>
+		</div>
+	</fieldset> 
+
+	<div class="su-btn__wrapper">
+		<button id="signUpSubmitBtn" class="su-btn" type="submit">
+			<span class="js-item__label">注册</span>
+		</button>
+	</div>
+	<p class="agreement-tip">
+		点击「注册」按钮，即代表您同意FT中文网
+		<a href="http://www.ftchinese.com/m/corp/service.html" target="_blank">
+			《用户注册协议》
+		</a>
+	</p>
+</form>
+
+
+{% if dev %}
+<script type="text/javascript" src="scripts/account.js"></script>
+{% endif %}
